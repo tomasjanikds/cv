@@ -1,0 +1,66 @@
+---
+name: Tomas
+surname: Janik
+position: "Lead Data Scientist"
+address: "VMware UK"
+phone: +44 75 212 33772
+# www: mariecurie.com
+email: "tomas.janik.uk@gmail.com"
+# twitter: mariecurie
+github: tomasjanikds
+linkedin: tomasjanik
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::awesomecv:
+    page_total: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# About me
+
+As a Full‐stack data scientist with over 15 years of experience, I bring a wealth of knowledge and expertise to any data-driven project. My background in both front-end and back-end development, combined with my strong data analytics skills, allow me to approach problems from a unique perspective and develop comprehensive solutions that address complex business challenges.
+
+# Work Experience
+
+```{r}
+library(tibble)
+tribble(
+  ~What, ~When, ~With, ~Where, ~Why,
+  "Quote to Cash (Project)", "2019 - Present", "Lead Data Scientist", "VMware UK", c("This project is an end-to-end machine learning solution that uses advanced algorithms to predict whether a quote is likely to be converted into a sale. Leveraging large amounts of historical data and sophisticated feature engineering techniques, the model is able to accurately predict the likelihood of a conversion, providing valuable insights to sales teams and helping them to focus their efforts on the most promising opportunities. The project is designed to be highly scalable, with a modular architecture that allows for easy integration into existing systems and workflows. Overall, it is a powerful tool for businesses looking to optimize their sales processes and drive growth."),
+  "Data pipelines (Project)", "", "", "", c("This project is focused on consolidation of numerous flat files into one single source, resulting in significant time savings. By leveraging advanced ETL techniques and data processing frameworks, the project eliminated the need for manual intervention and saved 1500 man-hours at the directorial level. This enabled the team to focus on higher-value tasks and drove increased efficiency. Data pipelines is for organizations looking to optimize their data processes and drive significant time savings."),
+  "Automation (MLOps)", "", "", "", c("This solution automates the entire machine learning flow, from data ingestion to model deployment, monitoring and logging. By leveraging MLOps and machine learning frameworks, the project streamlines the entire process, freeing up data scientists to focus on building and refining models rather than on manual processes."),
+  
+  "Forecasting Framework (Project)", "2017 - 2019", "Senior Data Scientist", "VMware UK", c("This project is an end-to-end machine learning solution that predicts thousands of time series, broken down by product and territory, and is used in dashboards for executives across the organization. By leveraging advanced time-series modeling techniques and machine learning frameworks, the project provides accurate and timely forecasts, enabling executives to make data-driven decisions and optimize operations. The implementation of the solution has resulted in increased efficiency, reduced costs, and improved performance across the organization."),
+  "Account Forecasting (Project)", "", "", "", c("This project is a machine learning solution that predicts bookings on an account level and is used for planning sales quotas across the organization. By leveraging advanced machine learning algorithms and predictive modeling techniques, the project provides accurate forecasts of future bookings, enabling sales teams to plan and optimize their quotas. The implementation of the solution has resulted in increased sales efficiency, improved forecasting accuracy, and better decision-making across the organization. The project has been a valuable tool for sales managers and executives looking to leverage data-driven insights to optimize their sales strategies and drive results."),
+  
+  "Internal systems audit", "2015 - 2017", "Data Scientist", "VMware UK", c("As part of my role, I was responsible for auditing internal systems and identifying gaps in integration across databases, storage, and machine learning platforms. By analyzing the systems' architecture and identifying key areas for improvement, I developed recommendations for solutions that would improve system efficiency and enable better data management. The project involved collaborating with cross-functional teams to identify the root cause of the integration issues and developing strategies to address them. The recommendations I provided helped to improve system performance, streamline data management, and better integrate databases, storage, and machine learning platforms. Overall, my work on this project helped to enhance the organization's technological capabilities and improve its overall data management practices."),
+  
+  "Reporting Specialist", "2014 - 2015", "Senior Order Analyst", "VMware International", c("As a Reporting Specialist, I was responsible for sourcing and designing data to produce reports for Sales, Quoting, and Export Compliance. I created reports and dashboards in a variety of platforms including Oracle Applications (OBIEE), Salesforce.com, Microsoft Packages, and web-based systems. To ensure ease of use and readability, I designed presentations of the analyzed data in Tableau, VMDash, and Excel. I also prepared weekly and monthly productivity reports for Senior Executives, providing them with valuable insights into key business metrics. Additionally, I completed quarterly analysis of transactional data from global business partners, which was used as a benchmark for improving collaboration with distributors. My role required strong analytical skills, attention to detail, and the ability to communicate complex data to stakeholders at all levels of the organization."),
+  
+  "SME for Reporting", "2011 - 2014", "Order Analyst", "VMware International", c("In my role as a data analyst, I initiated and executed data visualization using Tableau and Qlik for the Corporate Operations department. I collaborated with IT development teams in India and the US to secure network resources for data models. Additionally, I provided KPI metrics, measures, and data analysis to executive management and stakeholders, identifying gaps and raising suggestions to streamline processes and improve the quality of orders submitted by external partners. My role required strong communication skills, collaboration with cross-functional teams, and the ability to derive valuable insights from complex data.")
+) %>% 
+  detailed_entries(
+    what = What,
+    when = When,
+    with = With,
+    where = Where,
+    why = Why
+  )
+```
+
+
+# Education
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Master of Science in Data Analytics", "2014 - 2016", "University College Dublin", "Dublin, Ireland",
+  "Professional Diploma in Data Analytics", "2013 - 2014", "University College Dublin", "Dublin, Ireland",
+  "Information Technology", "1999 - 2004", "University of Economics", "Bratislava, Slovakia"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
